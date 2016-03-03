@@ -1,35 +1,40 @@
-
-	h2{
-		font-size:40;
-		color:purple;
-		background: black;
+	a{
+		color:#00ffff;
 	}
 	h1{
-		background:black;
-		font-size:80;
-		color: red;
+		font-size:500%;
+		color: #ee0000;
 	}
+	
+	h2{
+		font-size:40;
+		color:#ff00ff;
+	}
+
 	p{
 		font-size: 18;
-		background:black;
-		color:orange;
+		color:#ffff00;
 	}
 	body{
 		text-align: center;
-		background: url(http://3.bp.blogspot.com/-ISOa-ufScRA/UAcPBaTYXaI/AAAAAAAAAFc/ox0dZ18we6M/s1600/Screen+Shot+2012-07-17+at+1.15.17+AM.png);
+		background: #555555; 
 		background-position: center;
 		background-size: cover;
 	}
 
 	input{
+		border-radius: 5px;
 		border:0;
 		padding: 10px;
 		font-size: 18px;
+		color: #555555;
 	}
 	button{
+		border-radius: 5px;
 		background: red;
 		font-size: 18px;
-		size: 18px 10px; 	
+		size: 18px 10px; 
+		color: white;	
 	}
 	.email_submit{
 		position: relative;
