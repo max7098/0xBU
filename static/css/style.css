@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<head>
-	<title>0xBU</title>
-	<style>
+
 	h2{
 		font-size:40;
 		color:purple;
@@ -39,14 +36,3 @@
 		margin-top:15%;
 	}
 
-	</style>
-</head>
-<body>
-	<div class = "email_submit">
-		<h1>0xBU</h1>
-		<h2>11(unsigned)</h2>
-		<p>Welcome to the 0xBU website!!! </br> submit your email below to recieve weekly updates on upcoming events!!</p>
-		<input type="email" placeholder = "exampleName@bu.edu">
-		<button>Submit!!!</button>
-	</div>
-</body>
