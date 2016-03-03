@@ -18,6 +18,11 @@ EMAIL_USE_TLS = False
 app = Flask(__name__)
 
 
+@app.route('/helpful_links', methods=['GET'])
+def helpful_links():
+    return render_template('helpfulLinks.html')
+
+
 @app.route('/leaderboard', methods=['GET'])
 def leaderboard():
     return render_template('leaderBoard.html')
