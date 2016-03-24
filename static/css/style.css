@@ -2,18 +2,18 @@
 		color:#00ffff;
 	}
 	h1{
-		font-size:500%;
+		font-size:700%;
 		color: #ee0000;
 	}
 	
 
 	p{
 		font-size: 18;
-		color:#ffffff;
+		color:#ee0000;
 	}
 	body{
 		text-align: center;
-		background: #333333; 
+		background: #800000; 
 		background-position: center;
 		background-size: cover;
 	}
@@ -27,7 +27,7 @@
 	}
 	button{
 		border-radius: 5px;
-		background: red;
+		background: #ee0000;
 		font-size: 18px;
 		size: 18px 10px; 
 		color: white;	
