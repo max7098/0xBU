@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, url_for
 from flask.ext.mail import Mail
 from flask.ext.mail import Message
 # Host for sending e-mail.
-HOST = '0.0.0.0'
+HOST = 'localhost'
 # Port for sending e-mail.
 EMAIL_PORT = 1025
 # Port website runs on
@@ -15,9 +15,9 @@ EMAIL_USE_TLS = False
 app = Flask(__name__)
 mail = Mail(app)
 
-app.config["MAIL_server"] = 'smtp.gmail.com'
-app.config['MAIL_USERNAME'] = 'ratbastard153@gmail.com'
-app.config['MAIL_PASSWORD'] = 'w1nt3r1sc0m1ng'
+#app.config["MAIL_server"] = 'smtp.gmail.com'
+#app.config['MAIL_USERNAME'] = 'ratbastard153@gmail.com'
+#app.config['MAIL_PASSWORD'] = 'w1nt3r1sc0m1ng'
 
 @app.route('/helpful_links', methods=['GET'])
 def helpful_links():
@@ -37,11 +37,12 @@ def index():
 
         #sending the request email to major domo
         #spoofing email
-        msg = Message("Reply-To:","subscribe buhacknight-list "+email,sender= "ratbastard153@gmail.com" ,recipients=["angrybird106@gmail.com"])
+        msg = Message("Reply-To:"
+, sender=email,recipients=["angrybird106@gmail.com"])
+        msg.body =  "subscribe buhacknight-list " +email      
         mail.send(msg)
         print email
     return render_template('index.html')
-
 
 if __name__ == "__main__":
     app.run(port=PORT, host=HOST, debug=DEBUG)
