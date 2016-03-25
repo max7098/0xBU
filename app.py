@@ -33,7 +33,7 @@ def index():
     if request.method == "POST":
         #add to email list
         email = request.form['email']
-        
+         
     return render_template('index.html')
 
 
