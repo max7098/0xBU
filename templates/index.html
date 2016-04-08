@@ -3,6 +3,7 @@
 <head>
 	<title>0xBU</title>
 	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">	
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<form action="/" method="post">
@@ -13,7 +14,9 @@
 		<button>SUBMIT</button>
 
 	</div>
+	<div class = "links">
         <a href="{{ url_for('leaderboard') }}">Check the Leaderboard</a>
         <a href="{{ url_for('helpful_links') }}">Helpful Links</a>
+	</div>
 	</form>
 </body>

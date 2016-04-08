@@ -1,15 +1,23 @@
 	a{
-		color:#00ffff;
+		font-family: 'Ubuntu', sans-serif;
+		display: block;
+		padding: 30px 0px 0px 0px;
+		color:#cccccc;
 	}
 	h1{
-		font-size:700%;
-		color: #ee0000;
+		font-size:800%;
+		margin-top: -5%;
+		color: #848484;
+		font-family: 'Courier New', monospace;
 	}
 	
 
 	p{
+		display: block;
+		margin-top: -60px;
+		font-family: 'Ubuntu', sans-serif;
 		font-size: 18;
-		color:#ee0000;
+		color:#cccccc;
 	}
 	body{
 		text-align: center;
@@ -23,11 +31,11 @@
 		border:0;
 		padding: 10px;
 		font-size: 18px;
-		color: #555555;
+		color:#848484;
 	}
 	button{
 		border-radius: 5px;
-		background: #ee0000;
+		background:#c40307;
 		font-size: 18px;
 		size: 18px 10px; 
 		color: white;	
@@ -35,5 +43,11 @@
 	.email_submit{
 		position: relative;
 		margin-top:15%;
+	}
+	.links{
+		padding: 200px 5px 100% 5px;
+		position: absolute;
+		margin: -500px auto 0% 85%;
+		background: #b50003;
 	}
 
