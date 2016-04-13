@@ -1,27 +1,20 @@
 from flask import Flask, render_template, request, url_for
 
+import smtplib
 
 
-
-
-from flask.ext.mail import Mail
-from flask.ext.mail import Message
 
 # Host for sending e-mail.
+SERVER = "localhost"
+
+#host of the site
 HOST = 'localhost'
 # Port for sending e-mail.
-EMAIL_PORT = 1025
 # Port website runs on
 PORT = 8000
 DEBUG = True
 
-# Optional SMTP authentication information for EMAIL_HOST.
-EMAIL_USE_TLS = False
-
 app = Flask(__name__)
-mail = Mail(app)
-
-#app.config["MAIL_server"] = 'smtp.gmail.com'
 #app.config['MAIL_USERNAME'] = 'ratbastard153@gmail.com'
 #app.config['MAIL_PASSWORD'] = 'w1nt3r1sc0m1ng'
 
@@ -41,16 +34,30 @@ def index():
         #add to email list
         email = request.form['email']
 
-         
+        FROM = email
+        print(FROM)
+        TO = ["angrybird106@gmail.com"]
+
+        SUBJECT = "this is a test"
+        TEXT = "did it work?"
+
+        message = """\
+        From: %s
+        To: %s
+        Subject: %s
+
+        %s
+        """ % (FROM, ", ".join(TO),SUBJECT,TEXT)
+
+        server = smtplib.SMTP(SERVER)
+        server.sendmail(FROM, TO, message)
+        server.quit()
 
 
-        #sending the request email to major domo
+        #sending the request email 
         #spoofing email
-        msg = Message("Reply-To:"
-, sender=email,recipients=["angrybird106@gmail.com"])
-        msg.body =  "subscribe buhacknight-list " +email      
-        mail.send(msg)
-        print email
+
+        print (email)
 
     return render_template('index.html')
 

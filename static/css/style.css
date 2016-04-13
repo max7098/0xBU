@@ -45,7 +45,8 @@
 		margin-top:15%;
 	}
 	.links{
-		padding: 200px 5px 100% 5px;
+		height: 100vh;
+		padding: 200px 5px 0 5px;
 		position: absolute;
 		margin: -500px auto 0% 85%;
 		background: #b50003;
